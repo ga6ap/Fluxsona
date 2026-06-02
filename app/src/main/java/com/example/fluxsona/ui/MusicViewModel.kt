@@ -2474,7 +2474,7 @@ class MusicViewModel(private val repository: MusicRepository) : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 // Replace with your actual update manifest URL (e.g. GitHub raw file)
-                val updateUrl = "https://raw.githubusercontent.com/bobrslav/Fluxsona/main/update.json"
+                val updateUrl = "https://raw.githubusercontent.com/ga6ap/Fluxsona/master/update.json"
                 val json = URL(updateUrl).readText()
                 val info = Gson().fromJson(json, UpdateInfo::class.java)
                 
