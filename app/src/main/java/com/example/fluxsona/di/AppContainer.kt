@@ -12,7 +12,8 @@ class AppContainer(context: Context) {
             context,
             MusicDatabase::class.java,
             MusicDatabase.DATABASE_NAME
-        ).build()
+        ).addMigrations(MusicDatabase.MIGRATION_3_4, MusicDatabase.MIGRATION_4_5)
+        .fallbackToDestructiveMigration().build()
     }
 
     private val userPreferences: UserPreferences by lazy {

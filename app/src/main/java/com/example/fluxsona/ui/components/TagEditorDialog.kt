@@ -8,6 +8,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
+import com.example.fluxsona.R
 import com.example.fluxsona.data.model.Song
 import com.example.fluxsona.ui.MusicViewModel
 
@@ -22,11 +24,11 @@ fun TagEditorDialog(
 
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("Edit Tags: ${song.title}") },
+        title = { Text(stringResource(R.string.menu_edit_tags) + ": ${song.title}") },
         text = {
             Column(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
                 LazyColumn {
-                    items(allTags) { tag ->
+                    items(allTags.filter { it.name != "Favourite" }) { tag ->
                         Row(
                             modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                             verticalAlignment = Alignment.CenterVertically
@@ -49,12 +51,12 @@ fun TagEditorDialog(
                 viewModel.updateSongTags(song.id, songTags.toList())
                 onDismiss()
             }) {
-                Text("Save")
+                Text(stringResource(R.string.action_save))
             }
         },
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text("Cancel")
+                Text(stringResource(R.string.dialog_cancel))
             }
         }
     )

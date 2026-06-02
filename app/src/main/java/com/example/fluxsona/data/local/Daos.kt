@@ -14,6 +14,9 @@ interface SongDao {
     @Update
     suspend fun updateSong(song: SongEntity)
 
+    @Update
+    suspend fun updateSongs(songs: List<SongEntity>)
+
     @Delete
     suspend fun deleteSong(song: SongEntity)
 
@@ -28,6 +31,9 @@ interface TagDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertTag(tag: TagEntity)
+
+    @Update
+    suspend fun updateTag(tag: TagEntity)
 
     @Delete
     suspend fun deleteTag(tag: TagEntity)

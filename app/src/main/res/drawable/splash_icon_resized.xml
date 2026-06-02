@@ -1,7 +1,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@drawable/fluxsona_logo_only"
+        android:drawable="@drawable/splash_logo"
         android:gravity="center"
-        android:width="36dp"
-        android:height="36dp" />
+        android:width="120dp"
+        android:height="120dp" />
 </layer-list>

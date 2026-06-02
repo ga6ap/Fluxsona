@@ -19,12 +19,21 @@ data class SongEntity(
     val hasVideo: Boolean,
     val hasThumbnail: Boolean,
     val hasLyrics: Boolean,
-    val isFavorite: Boolean
+    val failedAudio: Boolean = false,
+    val failedThumbnail: Boolean = false,
+    val failedLyrics: Boolean = false,
+    val isFavorite: Boolean,
+    val localAudioPath: String? = null,
+    val localThumbnailPath: String? = null,
+    val localLyricsPath: String? = null,
+    val originalUrl: String? = null,
+    val dateAdded: Long = System.currentTimeMillis()
 )
 
 @Entity(tableName = "tags")
 data class TagEntity(
-    @PrimaryKey val name: String
+    @PrimaryKey val name: String,
+    val category: String = "Default"
 )
 
 class Converters {
