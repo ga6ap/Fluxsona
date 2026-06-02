@@ -1,0 +1,7 @@
+    {
+      "versionCode": 4,
+      "versionName": "2.9",
+      "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.9/fluxsona-v2.9.apk",
+      "releaseNotes": "- Added Category movement for Tags\n- Animated track swiping (Horizontal Pager)\n- Improved layout for full author visibility\n- Multi-select tag assignment\n- Turbo Volume safely capped at 500%\n- Data restoration status moved to Settings"
+    }
+    
