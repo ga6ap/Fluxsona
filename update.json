@@ -1,6 +1,6 @@
 {
-  "versionCode": 5,
-  "versionName": "3.0",
+  "versionCode": 6,
+  "versionName": "3.1",
   "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.9/fluxsona-v2.9.apk",
-  "releaseNotes": "- Test update to version 3.0\n- Verified OTA system works!"
+  "releaseNotes": "- Test update to version 3.1\n- Verified build.gradle version bump works!"
 }

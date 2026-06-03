@@ -494,7 +494,7 @@ fun SettingsScreen(viewModel: MusicViewModel) {
                     }
                 }
             ) {
-                viewModel.checkForUpdates()
+                viewModel.checkForUpdates(context)
             }
         }
     }

@@ -434,7 +434,7 @@ class MusicViewModel(private val repository: MusicRepository) : ViewModel() {
                     lyricsTextSize = it
                 }
             }
-            checkForUpdates()
+            checkForUpdates(context)
         }, MoreExecutors.directExecutor())
     }
 
@@ -2468,9 +2468,10 @@ class MusicViewModel(private val repository: MusicRepository) : ViewModel() {
         isQueueMaximized = false
     }
 
-    fun checkForUpdates() {
+    fun checkForUpdates(context: Context) {
         if (isCheckingForUpdates) return
         isCheckingForUpdates = true
+        val appContext = context.applicationContext
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 // Replace with your actual update manifest URL (e.g. GitHub raw file)
@@ -2478,8 +2479,16 @@ class MusicViewModel(private val repository: MusicRepository) : ViewModel() {
                 val json = URL(updateUrl).readText()
                 val info = Gson().fromJson(json, UpdateInfo::class.java)
                 
-                // Assuming current versionCode is 3
-                if (info.versionCode > 3) {
+                // Get current version code dynamically
+                val packageInfo = appContext.packageManager.getPackageInfo(appContext.packageName, 0)
+                val currentVersionCode = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                    packageInfo.longVersionCode.toInt()
+                } else {
+                    @Suppress("DEPRECATION")
+                    packageInfo.versionCode
+                }
+
+                if (info.versionCode > currentVersionCode) {
                     withContext(Dispatchers.Main) {
                         updateInfo = info
                     }
