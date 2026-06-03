@@ -2487,7 +2487,8 @@ class MusicViewModel(private val repository: MusicRepository) : ViewModel() {
                     @Suppress("DEPRECATION")
                     packageInfo.versionCode
                 }
-
+                Log.d("FluxsonaUpdate", "Current version: $currentVersionCode, Remote version: ${info.versionCode}")
+                Log.d("FluxsonaUpdate", "Current version: $currentVersionCode, Remote version: ${info.versionCode}")
                 if (info.versionCode > currentVersionCode) {
                     withContext(Dispatchers.Main) {
                         updateInfo = info
@@ -2650,7 +2651,7 @@ class MusicViewModel(private val repository: MusicRepository) : ViewModel() {
                         val audioExists = audioFile.exists() && song.localAudioPath != null; val thumbExists = thumbFile.exists() && song.localThumbnailPath != null; val lyricsExists = lyricsFile.exists() && song.localLyricsPath != null
                         song.copy(localAudioPath = if (audioExists) audioFile.absolutePath else null, localThumbnailPath = if (thumbExists) thumbFile.absolutePath else null, localLyricsPath = if (lyricsExists) lyricsFile.absolutePath else null, cacheStatus = song.cacheStatus.copy(hasAudio = audioExists, hasThumbnail = thumbExists, hasLyrics = lyricsExists))
                     }
-                    repository.insertSongs(finalSongs); importedTags.forEach { try { repository.insertTag(it.name) } catch (e: Exception) {} }
+                    repository.insertSongs(finalSongs); importedTags.forEach { try { repository.insertTag(it.name, it.category) } catch (e: Exception) {} }
                     withContext(Dispatchers.Main) { errorMessage = context.getString(R.string.msg_import_success, finalSongs.size, importedTags.size) }
                 }
             } catch (e: Exception) { errorMessage = context.getString(R.string.msg_import_failed, e.message) }
