@@ -1,6 +1,6 @@
 {
   "versionCode": 2,
   "versionName": "2.0",
-  "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.0/fluxsona.apk",
-  "releaseNotes": "- Update to version 2.0\n- High-performance music player features\n- Categorized tag management\n- Animated player transitions"
+  "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.0/app-release.apk",
+  "releaseNotes": "- Added Category movement for Tags\n- Animated track swiping (Horizontal Pager)\n- Improved layout for full author visibility\n- Multi-select tag assignment\n- Turbo Volume safely capped at 500%\n- Data restoration status moved to Settings"
 }
