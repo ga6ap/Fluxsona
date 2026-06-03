@@ -1,6 +1,6 @@
 {
-  "versionCode": 6,
-  "versionName": "3.1",
-  "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.9/fluxsona-v2.9.apk",
-  "releaseNotes": "- Test update to version 3.1\n- Verified build.gradle version bump works!"
+  "versionCode": 2,
+  "versionName": "2.0",
+  "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.0/fluxsona.apk",
+  "releaseNotes": "- Update to version 2.0\n- High-performance music player features\n- Categorized tag management\n- Animated player transitions"
 }
