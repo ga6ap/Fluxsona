@@ -1695,7 +1695,7 @@ class MusicViewModel(private val repository: MusicRepository) : ViewModel() {
                     songs.value.filter { it.id in specificSongIds }
                 } else {
                     songs.value
-                }
+                }.sortedByDescending { it.dateAdded }
                 val updatedSongs = mutableListOf<Song>()
                 
                 val audioExts = listOf("mp3", "m4a", "webm", "aac", "flac", "opus", "ogg")
