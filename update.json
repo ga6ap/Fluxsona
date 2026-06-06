@@ -2,5 +2,5 @@
   "versionCode": 4,
   "versionName": "2.3",
   "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.3/app-release.apk",
-  "releaseNotes": "- Volume limit increased to 1000%\n- Enhanced volume controls with Reset and custom Defaults\n- Toggle between elapsed and remaining time in player\n- Confirmation for category deletion\n- Adding own song files\n- Downloading from Spotify"
+  "releaseNotes": "- Support for Spotify track, album, and playlist links\n- Duration-matched YouTube audio search for high accuracy\n- Manual custom song addition with metadata and lyrics\n- Improved metadata extraction and faster YouTube title fetching\n- Categorized and alphabetical tag management\n- Grouped and collapsible download queue for playlists"
 }
