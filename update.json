@@ -1,6 +1,6 @@
 {
   "versionCode": 4,
-  "versionName": "2.2",
-  "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.2/app-release.apk",
-  "releaseNotes": "- Bumped version for testing\n- Storage migration logic integrated\n- Improved data restoration order"
+  "versionName": "2.3",
+  "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.3/app-release.apk",
+  "releaseNotes": "- Volume limit increased to 1000%\n- Enhanced volume controls with Reset and custom Defaults\n- Toggle between elapsed and remaining time in player\n- Confirmation for category deletion\n- Adding own song files\n- Downloading from Spotify"
 }
