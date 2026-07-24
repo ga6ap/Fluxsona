@@ -1,5 +1,5 @@
 {
-  "versionCode": 6,
+  "versionCode": 5,
   "versionName": "2.7",
   "downloadUrl": "https://github.com/ga6ap/Fluxsona/releases/download/v2.7/app-release.apk",
   "releaseNotes": "- Multi-engine language tagging consensus (Quick vs. Detailed modes)\n- Song locking system to protect against accidental deletion or cache clearing\n- Serbian script toggle (Cyrillic vs. Latin) and finalized localizations for 40+ languages\n- Infinite looping tab navigation with reordered Library and Search tabs\n- Integrated tag search and categorized management refinements\n- \"Lock Missing Songs\" online availability check for library maintenance\n- Improved media notification interaction and batch action stability"
